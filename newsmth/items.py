@@ -15,3 +15,10 @@ class NewsmthItem(scrapy.Item):
     title = scrapy.Field()
     post_time = scrapy.Field()
     author = scrapy.Field()
+
+
+class MyPhotoItem(scrapy.Item):
+    url = scrapy.Field()
+    title = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()

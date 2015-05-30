@@ -24,7 +24,10 @@ COOKIES_ENABLES = False
 
 ITEM_PIPELINES = {
     'newsmth.json_pipeline.JsonPipeline': 300,
+    'scrapy.contrib.pipeline.images.ImagesPipeline': 1
 }
+
+IMAGES_STORE = '/tmp/newsmth_img'
 
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
