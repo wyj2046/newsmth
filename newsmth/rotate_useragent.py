@@ -11,7 +11,6 @@ class RotateUserAgentMiddleware(UserAgentMiddleware):
     def process_request(self, request, spider):
         ua = random.choice(self.user_agent_list)
         if ua:
-            print '**********Current UA:%s**********' % ua
             log.msg('Current UA:' + ua, level=log.INFO)
             request.headers.setdefault('User-Agent', ua)
 
